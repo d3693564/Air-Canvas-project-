@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Canvas - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h1>Welcome to Air Canvas</h1>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+
+            <form id="loginForm" class="tab-content active">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <div class="error-message"></div>
+            </form>
+
+            <form id="registerForm" class="tab-content">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <div class="error-message"></div>
+            </form>
+        </div>
+
+        <div class="auth-hero">
+            <h1>Air Canvas</h1>
+            <p>Draw in the air using your webcam! Express your creativity with hand gestures and create beautiful digital artwork.</p>
+            <ul>
+                <li>✨ Hand tracking technology</li>
+                <li>🎨 Multiple color options</li>
+                <li>🔄 Real-time drawing</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+</body>
+</html>

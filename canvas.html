@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Canvas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <div class="toolbar">
+            <div class="color-picker">
+                <input type="color" id="colorPicker" value="#4A90E2">
+            </div>
+            <button id="clearBtn">Clear</button>
+            <button id="saveBtn">Save</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+            <video id="video" style="opacity: 0.3"></video>
+            <div id="status" class="status">Status: Ready</div>
+        </div>
+
+        <button id="galleryBtn" class="gallery-btn">
+            <span class="icon">🖼️</span> Gallery
+        </button>
+
+        <div id="gallery" class="gallery hidden">
+            <div class="gallery-header">
+                <h2>Gallery</h2>
+                <button id="closeGallery">✕</button>
+            </div>
+            <div class="gallery-content"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="{{ url_for('static', filename='canvas.js') }}"></script>
+</body>
+</html>
